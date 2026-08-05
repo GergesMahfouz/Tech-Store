@@ -142,7 +142,7 @@ header div ul li a{
     line-height: 25px;
 }
 .buttons{
-    margin: 20px 0;
+    margin: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -191,7 +191,7 @@ header div ul li a{
     gap: 7px;
     align-items: center;
     margin: 10px 7.5px;
-    margin-bottom: 20px;
+    /* margin-bottom: 10px; */
 
 }
 .hero-service ul li i{
@@ -227,7 +227,7 @@ header div ul li a{
     background-color: #fff;
     border-radius: 10px;
     transition: 0.5s;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .heroPrec div:hover{
     transform:  scale(1.07);
@@ -266,5 +266,90 @@ header div ul li a{
 @media(max-width:380px){
     .heroPrec{
         justify-content: center;
+    }
+}
+
+
+/* /////////////////////////////////////////////////////feat/////////////////////////////////////////////////// */
+.feat{
+    text-align: center;
+    padding: 40px 10px;
+    background-color: #f8fafc;
+}
+.feat h2{
+    font-size: 40px;
+    color:#0f172a
+}
+.feat-p{
+    font-size: 18px;
+    color: #64748B;
+    margin-bottom: 20px;
+}
+.feat-carts{
+    display: grid;
+    grid-template-columns: repeat(6 , 1fr);
+}
+.feat-carts div{
+    width: 190px;
+    height: 220px;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 24px;
+    background-color: #fff;
+    box-shadow: 0 15px 35px rgba(15, 23, 42,0.8);
+    transition: all 0.3s;
+    margin: 20px auto 0 auto;
+}
+.feat-carts div:hover{
+    transform: translateY(-8px);
+    background-color: #1d4ed8;
+    color:#fff;
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 1.5);
+}
+.feat-icon1{
+    font-size: 35px;
+    border-radius: 50%;
+    width: 70px;
+    height:70px;
+    padding-top: 17px;
+    border-radius: 50%;
+    background-color: #bdd2ff;
+    color:#2563eb;
+}
+.feat-carts div:hover .feat-icon1{
+    background-color: #1d4ed8;
+    color:#fff
+}
+.feat-carts div h3{
+    margin:5px 0;
+}
+.feat-icon2{
+    width: 38px;
+    height: 38px;
+    border: 2px solid #e2e8f0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #2563eb;
+    padding-top: 9px;
+    margin-top: 10px;
+}
+.feat-carts div:hover .feat-icon2{
+    border: 2px solid #fff;
+    color:#fff;
+    transform: translateX(5px);
+}
+@media(max-width:1380px){
+    .feat-carts{
+        grid-template-columns: repeat(3 , 1fr);
+    }
+}
+@media(max-width:650px){
+    .feat-carts{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+@media(max-width:450px){
+    .feat-carts{
+        grid-template-columns: repeat(1 , 1fr);
     }
 }
