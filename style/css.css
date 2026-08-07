@@ -389,6 +389,7 @@ header div ul li a{
 }
 .Featured-cart1:hover{
     transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
 }
 .Featured-cart-top{
     height: 220px;
@@ -412,13 +413,16 @@ header div ul li a{
     display: block;
     position: absolute;
     left: 55px;
-    z-index: 1;
-    transition: .4s;
+    transition: .3s;
     filter: drop-shadow(0 20px 35px rgba(15,23,42,.18));
+}
+.Featured-cart-top .img-watch{
+    left: 45px;
 }
 .Featured-cart1:hover .Featured-cart-top img{
     transform: scale(1.05);
     filter: drop-shadow(0 35px 60px rgba(37,99,235,.25));
+
 }
 .Featured-cart-top i{
     width: 40px;
@@ -429,6 +433,14 @@ header div ul li a{
     justify-content: center;
     align-items: center;
     margin-top: -4px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: absolute;
+    left:220px;
+}
+.Featured-cart-top i:hover{
+    color:#ef4444;
+    transform: scale(1.1);
 }
 .Featured-cart-bottom{
     padding: 20px;
@@ -442,11 +454,11 @@ header div ul li a{
 }
 .Featured-cart-bottom div i{
     color: #fbbf24;
-    margin-left: 2px;
+    margin-left: 3px;
 }
 .Featured-cart-bottom div span{
     font-size: 14px;
-    font-weight: 400px;
+    font-weight: 400;
     margin-left: 10px;
     color:#64748B
 }
@@ -483,6 +495,7 @@ header div ul li a{
     font-weight: 600;
     margin-top: 13px;
     transition: 0.3s;
+    cursor: pointer;
 }
 .Featured-cart1:hover .Featured-cart-bottom button{
     background-color: #1d4ed8;
