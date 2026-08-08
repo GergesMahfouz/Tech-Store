@@ -814,3 +814,116 @@ font-size: 16px;
         font-size: 11px;
     }
 }
+
+
+
+/* ///////////////////////////////////////////////////////////brands////////////////////////////////////////////// */
+.brands{
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f8fafc;
+}
+.brands h2{
+    font-size: 40px;
+    font-weight: 700;
+}
+.brands-desc{
+    font-size: 20px;
+    font-weight: 400;
+    color: #64748B;
+    margin-bottom: 50px;
+}
+.brands-contanier{
+    display: grid;
+    grid-template-columns: repeat(6 , 1fr);
+    gap: 10px;
+}
+
+.brands-contanier div{
+    width: 190px;
+    height:200px;
+    background-color: #fff;
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+    margin: auto;
+    padding: 24px;
+    transition: 0.3s;
+}
+.brands-contanier div:hover{
+    transform: translateY(-8px);
+    border-color: #2563EB;
+    box-shadow: 0 15px 35px rgba(37, 99, 235, .12);
+}
+.brands-contanier div svg{
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 30px;
+    margin-top: -9px;
+}
+.brands-contanier div .sam{
+    margin-top: -25px;
+    width: 120px;
+    height:120px;
+    margin-bottom: 0;
+}
+.brands-contanier div .sam-h3{
+    margin-top: -7px;
+}
+.brands-contanier div .sony{
+    width: 100px;
+    height: 100px;
+    margin-top: -18px;
+}
+.brands-contanier div .sony-h3{
+    margin-top: -27px;
+}
+.brands-contanier div .dell{
+    width: 80px;
+    height:80px;
+    margin-top: -10px;
+}
+.brands-contanier div .dell-h3{
+    margin-top: -15px;
+}
+.brands-contanier div .hp{
+    width: 69px;
+    height:69px;
+    margin-top: -7px;
+}
+.brands-contanier div .hp-h3{
+    margin-top: -2px;
+}
+.brands-contanier div .lenovo{
+    width: 120px;
+    height:120px;
+    margin-top: -30px;
+}
+.brands-contanier div .lenovo-h3{
+    margin-top: -29px;
+}
+.brands-contanier div h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+.brands-contanier div p{
+    font-size: 15px;
+    font-weight: 500;
+    color: #2563EB;
+    margin-top: 10px;
+}
+@media(max-width:1240px){
+    .brands-contanier{
+        grid-template-columns: repeat(3 , 1fr);
+    }
+}
+@media(max-width:640px){
+    .brands-contanier{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+@media(max-width:440px){
+    .brands-contanier{
+        grid-template-columns: repeat(1 , 1fr);
+    }
+}
