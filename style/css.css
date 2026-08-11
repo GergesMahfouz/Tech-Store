@@ -1138,3 +1138,132 @@ font-size: 16px;
         top:273px
     }
 }
+
+
+
+
+/* /////////////////////////////////////////////////////////////////footer//////////////////////////////////////////////// */
+.footer{
+    background-color: #0f172a;
+    color:#fff;
+    padding-bottom: 15px;
+}
+.footer-content{
+    display:grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 50px;
+    padding: 70px 30px 25px 30px;
+    border-bottom: 2px solid #1e293b;
+}
+.footer-top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.footer-top img{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+.footer-top h2{
+    font-size: 28px
+}
+.first-des{
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+.footer-first ul{
+    display: flex;
+    gap: 30px;
+}
+.footer-first ul li{
+    list-style: none;
+    margin-bottom: 20px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #1e293b;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.footer-first ul li:hover{
+    background-color: #2563EB;
+    border-color: #2563EB;
+    transform: translateY(-4px);
+}
+.footer-first ul li a {
+    color:#fff;
+    transition: 0.3s;
+}
+.footer-second h2, .footer-three h2 , .footer-four h2{
+    font-size: 20px;
+}
+.footer-second ul li, .footer-three ul li{
+    list-style: none;
+    margin-top: 8px;
+}
+.footer-second ul li a, .footer-three ul li a{
+    text-decoration: none;
+    color: #94a3b8;
+    transition: .3s;
+}
+.footer-second ul li a:hover,
+.footer-three ul li a:hover{
+    color: #2563EB;
+}
+.footer-four h2{
+    margin-bottom: 10px;
+}
+.footer-four div{
+    display: flex;
+    gap:10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.footer-four div i{
+    font-size: 20px;
+    width: 40px;
+    height:40px;
+    background-color: #2563EB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.footer-four div p{
+    color:#94a3b8
+}
+.footer-p{
+    text-align: center;
+    margin-top: 15px;
+}
+@media(max-width:1015px){
+    .footer-content{
+        grid-template-columns: repeat(2 , 1fr);
+        text-align: center;
+    }
+    .footer-first{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .first-des{
+        text-align: center;
+    }
+    .footer-four div{
+        display: flex;
+        justify-content: center;
+    }
+    .footer-four div i{
+        display: none;
+    }
+}
+@media(max-width:550px){
+    .footer-content{
+        grid-template-columns: repeat(1 , 1fr);
+        text-align: center;
+    }
+}
