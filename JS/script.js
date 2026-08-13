@@ -76,8 +76,7 @@ add()
 // اضافة الي العربة
 let counter = document.querySelector("#counter")
 let menu =document.querySelector("#menu")
-
-let cart = []
+let cart = JSON.parse(localStorage.getItem("products"))
 function addCart(id){
     let product = products.find(item =>{
         return item.id === id
@@ -95,6 +94,7 @@ function addCart(id){
             quantity : 1
         })
     }
+    
     updateCart()
     console.log(cart)
 }
@@ -102,7 +102,7 @@ function addCart(id){
 function updateCart() {
 
     let dis = cart.map(function(item) {
-
+localStorage.setItem("products" , JSON.stringify(cart))
         let process = item.new * item.quantity;
         return `
             <div class="menu-cont">
@@ -139,7 +139,8 @@ function updateCart() {
 
     
     menu.innerHTML = dis.join("") + `
-        <p class="menu-p">Total price is : $${total}</p>
+        <p class="menu-p">Total price is : $${total}</p> 
+        <a href="cart.html" class="menu-a">View all products</a>
     `;
 
     counter.textContent = cart.reduce(function(total, item) {
@@ -148,6 +149,8 @@ function updateCart() {
     
     
 }
+updateCart()
+
 function fun(id){
         cart = cart.filter(item => {
             return item.id !== id
@@ -159,7 +162,9 @@ car.addEventListener("click" , function(){
     menu.style.display=
         menu.style.display == "block" ? "none" : "block"
     if(cart.length == 0){
-        menu.innerHTML = "Cart is empty"
+        menu.innerHTML = `
+            <h3 style="color : #000; text-align:center; letter-spacing:1px">Cart is empty</h3>
+        `
     }
     
 })
