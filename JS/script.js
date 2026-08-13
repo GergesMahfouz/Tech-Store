@@ -76,7 +76,7 @@ add()
 // اضافة الي العربة
 let counter = document.querySelector("#counter")
 let menu =document.querySelector("#menu")
-let cart = JSON.parse(localStorage.getItem("products"))
+let cart = JSON.parse(localStorage.getItem("products")) || []
 function addCart(id){
     let product = products.find(item =>{
         return item.id === id
@@ -102,7 +102,7 @@ function addCart(id){
 function updateCart() {
 
     let dis = cart.map(function(item) {
-localStorage.setItem("products" , JSON.stringify(cart))
+        localStorage.setItem("products" , JSON.stringify(cart))
         let process = item.new * item.quantity;
         return `
             <div class="menu-cont">
@@ -147,7 +147,7 @@ localStorage.setItem("products" , JSON.stringify(cart))
         return total + item.quantity;
     }, 0);
     
-    
+
 }
 updateCart()
 
